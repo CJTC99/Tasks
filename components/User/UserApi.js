@@ -23,8 +23,10 @@ User.get("/all", async (req, res) => {
       message: error,
     });
   }
+
 });
 
+//Rgistrar usuario 
 User.post("/sign-up", async (req, res) => {
 
   let { nombre, correo, contraseña, no_tareas } = req.body;
@@ -33,6 +35,7 @@ User.post("/sign-up", async (req, res) => {
 
 });
 
+//Iniciar sesión de usuario
 User.post("/login", async (req, res) => {
 
   console.log(req.body);
